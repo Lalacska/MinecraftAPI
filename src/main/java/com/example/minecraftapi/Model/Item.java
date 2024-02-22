@@ -4,12 +4,14 @@ import jakarta.persistence.*;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
+// The class is a entity that will be mapped to a database table
 @Entity
+//Specifies the name of the table in the database.
 @Table
 public class Item {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = IDENTITY) //Generates a new unique id
     private int id;
     @Column(nullable = false)
     private String name;
